@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Site da Inscrição Tech">
+    <meta name="keywords" content="Insrição, Tech, Desenvolvedor">
+    <meta name="author" content="Caio Giovani Santos Madureira">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="site/site.css">
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <section>
+        <form name="frmfaleconosco" method="post"  action="#" onsubmit="return validaFaleConosco()">
+            <h2>Inscrição para o Evento Tech 2025</h2>
+            <p>Complete o formalário abaixo para se inscrever no evento</p>
+          <fieldset class="faleConosco">
+            <legend>Informações Pessoais:</legend>
+            <input type="text" name="txtnome" id="nome" placeholder="Nome">
+            <input type="text" name="txtfone" id="fone" placeholder="Telefone">
+            <input type="email" name="txtemail" id="email" placeholder="E-mail">
+            <input type="password" name="txtpass" id="senha" placeholder="Crie uma senha">
+            <input type="text" name="txtidade" id="idade" placeholder="Idade">
+            <input type="date" name="txtdata" id="data">
+        </fieldset>
+        <fieldset class="faleConosco">
+            <legend>Preferências do Evento:</legend>
+            <select name="selmotivo" id="motivo">
+              <option value="">Selecione um tema de interesse</option>
+              <option value="FE">Front-End</option>
+              <option value="BE">Back-End</option>
+              <option value="FS">Full Stack</option>
+              <option value="CD">Ciência de Dados</option>
+            </select>
+                <input type="checkbox" id="butao">
+                 Desenvolvimento Web Moderno
+                <input type="checkbox" id="butao">
+                 Introdução à Inteligência Artificial
+                <input type="checkbox" id="butao">
+                 Segurança na Internet
+          </fieldset>
+          <fieldset class="faleConosco">
+            <legend>Sumbissão de Apresentação:</legend>
+            <label for="titulo">Titulo:</label>
+            <input type="text" name="txtitulo" id="titulo">
+            <label for="comentario">Resumo:</label>
+            <textarea name="txacomentario" id="comentario"></textarea>
+            <button type="reset">Limpar</button><button type="submit" id="submit">Enviar</button>
+          </fieldset>
+        </form>
+      </section>
+</body>
+</html>
