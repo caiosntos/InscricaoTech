@@ -11,11 +11,14 @@
 </head>
 <body>
     <section>
+        <div class="formContainer">
         <form name="frmfaleconosco" method="post"  action="#" onsubmit="return validaFaleConosco()">
             <h2>Inscrição para o Evento Tech 2025</h2>
             <p>Complete o formalário abaixo para se inscrever no evento</p>
           <fieldset class="faleConosco">
+            <div class="titles">
             <h1>Informações pessoais:</h1>
+            </div>
             <input type="text" name="txtnome" id="nome" placeholder="Nome">
             <input type="text" name="txtfone" id="fone" placeholder="Telefone">
             <input type="email" name="txtemail" id="email" placeholder="E-mail">
@@ -24,30 +27,35 @@
             <input type="date" name="txtdata" id="data">
         </fieldset>
         <fieldset class="faleConosco">
+            <div class="titles">
             <h3>Preferências do Evento:</h3>
-            <select name="selmotivo" id="motivo">
+            </div>
+            <select  name="selmotivo" id="motivo" onchange="verificaMotivo(this.value)">
               <option value="">Selecione um tema de interesse</option>
               <option value="FE">Front-End</option>
               <option value="BE">Back-End</option>
               <option value="FS">Full Stack</option>
               <option value="CD">Ciência de Dados</option>
             </select>
-                <input type="checkbox" id="butao">
-                 Desenvolvimento Web Moderno
-                <input type="checkbox" id="butao">
-                 Introdução à Inteligência Artificial
-                <input type="checkbox" id="butao">
-                 Segurança na Internet
+            <div id="opcaoProduto"></div>
+            <h5>Workshops:</h5>
+            <label><input type="radio" name="interesse"> Desenvolvimento Web Moderno</label>
+            <label><input type="radio" name="interesse"> Introdução à Inteligência Artificial</label>
+            <label><input type="radio" name="interesse"> Segurança na Internet</label>
           </fieldset>
           <fieldset class="faleConosco">
+            <div class="titles">
             <h4>Submissão de Apresentação:</h4>
+            </div>
             <label for="titulo">Titulo:</label>
-            <input type="text" name="txtitulo" id="titulo">
+            <input type="text" name="txtitulo" id="titulo" placeholder="Título de Apresentação">
             <label for="comentario">Resumo:</label>
-            <textarea name="txacomentario" id="comentario"></textarea>
-            <button type="reset">Limpar</button><button type="submit" id="submit">Enviar</button>
+            <textarea name="txcomentario" id="comentario" placeholder="Resumo da Apresentação"></textarea>
+            <input type="file" name="arquivo">
+            <button type="submit" id="submit">Enviar Inscrição</button>
           </fieldset>
         </form>
+        </div>
       </section>
 </body>
 </html>
