@@ -101,3 +101,13 @@ function verificaMotivo(motivo){
     }
 }
 
+function validarTipoArquivo(seletorCampo){
+        var arquivo = document.getElementById('comprovante');
+
+        if(arquivo.files[0].type != "application/pdf"){
+            alert("Erro: Tipo de arquivo inválido, envie seu arquivo já em PDF.");
+
+            arquivo.value = '';
+        }
+}
+

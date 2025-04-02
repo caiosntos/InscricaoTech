@@ -14,7 +14,7 @@
         <div class="formContainer">
         <form name="frmfaleconosco" method="post"  action="#" onsubmit="return validaFaleConosco()">
             <h2>Inscrição para o Evento Tech 2025</h2>
-            <p>Complete o formalário abaixo para se inscrever no evento</p>
+            <p>Complete o formulário abaixo para se inscrever no evento</p>
           <fieldset class="faleConosco">
             <div class="titles">
             <h1>Informações pessoais:</h1>
@@ -51,7 +51,9 @@
             <input type="text" name="txtitulo" id="titulo" placeholder="Título de Apresentação">
             <label for="comentario">Resumo:</label>
             <textarea name="txcomentario" id="comentario" placeholder="Resumo da Apresentação"></textarea>
-            <input type="file" name="arquivo">
+            <form action="post" action="" enctype="multipart/form-data">
+                <input type="file" name="comprovante" id="comprovante" onchange="validarTipoArquivo('comprovante')" accept="application/pdf">
+            </form>
             <button type="submit" id="submit">Enviar Inscrição</button>
           </fieldset>
         </form>
